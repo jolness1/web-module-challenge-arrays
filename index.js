@@ -84,7 +84,7 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(arr , newTaste) {
     arr.unshift(newTaste);
-  return(arr)
+    return(arr)
 }
      
     console.log(addFlavor(copyCat , 'Rainbow Sherbert'))
@@ -102,10 +102,11 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/) {
-  /*your code here*/
+function removeLastFlavor(arr) {
+  arr.pop(arr.length)
+  return(arr)
 }
-
+    console.log(removeLastFlavor(copyCat));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
 
@@ -116,9 +117,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/) {
-  /*your code here*/
-}
+function getFlavorByIndex(arr , index) {
+  return arr[index]
+}  
+    console.log((copyCat , 3)
+
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -134,9 +138,13 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
-  /*your code here*/
+function removeFlavorByName(arr , string) {
+ const i = arr.indexOf(string);
+    arr.splice(i, 1);
+    return arr.length
 }
+console.log(removeFlavorByName(copyCat , "Rocky Road"))
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
