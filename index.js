@@ -47,6 +47,7 @@ Use the copy function below to do the following:
 
 function copy(arr) {
   return [...arr];
+  
 }
 
 const copyCat = copy(originalFlavors);
@@ -67,7 +68,7 @@ function is31Flavors(arr) {
     return(arr.length === 31);
   }
   
-  console.log(is31Flavors(copyCat))
+  console.log(is31Flavors(copyCat));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -84,10 +85,10 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(arr , newTaste) {
     arr.unshift(newTaste);
-    return(arr)
+    return(arr);
 }
      
-    console.log(addFlavor(copyCat , 'Rainbow Sherbert'))
+    console.log(addFlavor(copyCat , 'Rainbow Sherbert'));
 
 
 
@@ -103,8 +104,8 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(arr) {
-  arr.pop(arr.length)
-  return(arr)
+  arr.pop(arr.length);
+  return(arr);
 }
     console.log(removeLastFlavor(copyCat));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -112,16 +113,15 @@ Write a function that returns a flavor at a given index in the array.
 
 Use the getFlavorByIndex function below to do the following:
     1. Recieve an array and an index
-    2. Return the flavor located at the received index position
+    2. Return the  flavor located at the received index position
 
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
 function getFlavorByIndex(arr , index) {
-  return arr[index]
+  return arr[index];
 }  
-    console.log((copyCat , 3)
-
+    console.log(getFlavorByIndex(copyCat , 3))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -133,17 +133,17 @@ Use the removeFlavorByName function below to do the following:
     2. Remove that flavor from the array
     5. Return the resulting array that now contains one less flavor
 
-    For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
+    For example: running removeFlavorByName(originalFlavors, "Rocky Road") return an array with the a length of 30 because Rocky Road would have been removed. 
 
     HINT: You can use .splice() for this
 */
 
 function removeFlavorByName(arr , string) {
- const i = arr.indexOf(string);
-    arr.splice(i, 1);
-    return arr.length
+ const toRemove = arr.indexOf(string);
+    arr.splice(toRemove, 1);
+    return arr;
 }
-console.log(removeFlavorByName(copyCat , "Rocky Road"))
+console.log(removeFlavorByName(copyCat , "Vanilla"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
