@@ -165,9 +165,18 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/) {
-  /*your code here*/
+function filterByWord(arr , string) {
+  let newarr = [];
+  for(let i=0 ; i < arr.length; i++){
+
+    if(arr[i].includes(string)){
+        newarr.push(arr[i]);
+    }
+  }
+  return newarr;
 }
+
+console.log(filterByWord(copyCat , 'Chocolate'))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
